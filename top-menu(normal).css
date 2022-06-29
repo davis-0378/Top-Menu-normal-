@@ -1,0 +1,95 @@
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+}
+
+ul.drop-down-menu li {
+    background-color: #fff;
+    margin-right: 2px;
+    margin: 2px;
+    position: relative;
+    white-space: nowrap;
+    float: left;
+    transition: 0.5s;
+}
+
+ul.drop-down-menu a {
+    color: #9da9b9;
+    display: block;
+    padding: 0 30px;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 30px;
+    transition: 0.5s;
+    border: 1px solid #8696a6;
+}
+
+ul.drop-down-menu li:hover > a {
+    color: #fff;
+    background-color: #8696a6;
+}
+
+ul.drop-down-menu a:hover {
+    color: #fff;
+    background-color: #8696a6;
+}
+
+ul.drop-down-menu ul {
+    position: absolute;
+    z-index: 99;
+    left: 1px;
+    top: 100%;
+    min-width: 70px;
+}
+
+ul.drop-down-menu ul a {
+    text-align: center;
+}
+
+ul.drop-down-menu li li {
+    margin-bottom: 0px;
+}
+
+ul.drop-down-menu li  li a:hover {
+    color: #fff;
+    background-color: #9da9b9;
+}
+
+ul.drop-down-menu ul {
+    left: 99999px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    left: 1px;
+    border-right: 5px;
+}
+
+ul.drop-down-menu ul li:hover > ul { /* 滑鼠滑入展開次選單*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    left: 1px;
+    border-right: 5px;
+    left: 90%;
+}
+
+ul.drop-down-menu ul ul {
+    position: absolute;
+    z-index: 999;
+    top: 10px;
+    left: 90%;
+}
+
+ul.drop-down-menu ul li:hover > li {
+    left: 90%;
+}
